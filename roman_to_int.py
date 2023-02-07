@@ -66,6 +66,3 @@ def romanToInt(s: str) -> int:
         else:
             number -= nums.pop(0)
     return number + sum(nums)
-
-
-print(romanToInt("I"))
