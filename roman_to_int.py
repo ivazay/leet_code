@@ -58,14 +58,14 @@ def romanToInt(s: str) -> int:
          'M': 1000
          }
     nums = list(map(lambda x: d.get(x), s))
-
-    current = 0
-    _next = current + 1
     number = 0
 
     while len(nums) > 1:
-        if nums[current] >= nums[_next]:
-            number += nums.pop(current)
+        if nums[0] >= nums[1]:
+            number += nums.pop(0)
         else:
-            number += abs(nums.pop(current) - nums.pop(current))
+            number -= nums.pop(0)
     return number + sum(nums)
+
+
+print(romanToInt("I"))
