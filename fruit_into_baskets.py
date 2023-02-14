@@ -11,27 +11,6 @@ Starting from any tree of your choice, you must pick exactly one fruit from ever
 Once you reach a tree with fruit that cannot fit in your baskets, you must stop.
 Given the integer array fruits, return the maximum number of fruits you can pick.
 
-
-
-Example 1:
-
-Input: fruits = [1,2,1]
-Output: 3
-Explanation: We can pick from all 3 trees.
-Example 2:
-
-Input: fruits = [0,1,2,2]
-Output: 3
-Explanation: We can pick from trees [1,2,2].
-If we had started at the first tree, we would only pick from trees [0,1].
-Example 3:
-
-Input: fruits = [1,2,3,2,2]
-Output: 4
-Explanation: We can pick from trees [2,3,2,2].
-If we had started at the first tree, we would only pick from trees [1,2].
-
-
 Constraints:
 
 1 <= fruits.length <= 105
@@ -54,3 +33,9 @@ def total_fruit(fruits: list[int]) -> int:
         max_size = max(max_size, right - num)
 
     return max_size
+
+
+if __name__ == '__main__':
+    assert total_fruit([1, 2, 1]) == 3
+    assert total_fruit([0, 1, 2, 2]) == 3
+    assert total_fruit([1, 2, 3, 2, 2]) == 4

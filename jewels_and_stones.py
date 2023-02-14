@@ -28,3 +28,8 @@ def num_jewels_in_stones(jewels: str, stones: str) -> int:
         if letter in jewels:
             counter += 1
     return counter
+
+
+if __name__ == '__main__':
+    assert num_jewels_in_stones("aA", "aAAbbbb") == 3
+    assert num_jewels_in_stones("z", "ZZ") == 0
